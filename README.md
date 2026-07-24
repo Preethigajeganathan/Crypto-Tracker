@@ -70,13 +70,6 @@ cd crypto-tracker
 npm install
 ```
 
-### Create a `.env` file
-
-```env
-VITE_COINGECKO_API_KEY=your_coingecko_api_key
-VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-```
-
 ### Start the development server
 
 ```bash
@@ -94,15 +87,6 @@ VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 
 > Never commit your `.env` file to GitHub.
 
-## 📸 Screenshots
-
-Add screenshots here after deployment.
-
-- Home Page
-- Coin Details
-- Features Page
-- Pricing Page
-- Blog Page
 
 ## 🚀 Deployment
 
