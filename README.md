@@ -13,6 +13,11 @@ A modern cryptocurrency tracking web application built with **React**, **Vite**,
 - 📱 Fully responsive design
 - ⚡ Fast performance with Vite
 
+# 🚀 Demo
+
+
+Live Demo: https://crypto-tracker-preethiga.vercel.app/
+
 ## 🛠️ Tech Stack
 
 - React.js
