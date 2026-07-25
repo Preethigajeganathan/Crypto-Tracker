@@ -16,7 +16,7 @@ A modern cryptocurrency tracking web application built with **React**, **Vite**,
 # 🚀 Demo
 
 
-Live Demo: https://crypto-tracker-preethiga.vercel.app/
+Live Demo: https://crypto-tracker-lilac-five.vercel.app/
 
 ## 🛠️ Tech Stack
 
