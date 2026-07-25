@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 import arrowicon from "../../assets/arrow_icon.png";
 import { CoinContext } from "../../context/CoinContext";
 import { Link } from "react-router-dom";
-import { SignedIn, UserButton } from "@clerk/clerk-react";
+import { SignedIn,SignedOut,SignInButton, UserButton } from "@clerk/clerk-react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -56,16 +56,24 @@ const Navbar = () => {
           <option value="eur">EUR</option>
           <option value="inr">INR</option>
         </select>
-        <UserButton
-          afterSignOutUrl="/"
-          appearance={{
-            elements: {
-              avatarBox: "user-avatar",
-              userButtonPopoverCard: "user-popover",
-              userButtonPopoverActionButton: "user-action",
-            },
-          }}
-        />
+        <SignedIn>
+          <UserButton
+            afterSignOutUrl="/"
+            appearance={{
+              elements: {
+                avatarBox: "user-avatar",
+                userButtonPopoverCard: "user-popover",
+                userButtonPopoverActionButton: "user-action",
+              },
+            }}
+          />
+        </SignedIn>
+
+        <SignedOut>
+          <SignInButton mode="modal">
+            <button className="login-btn">Sign In</button>
+          </SignInButton>
+        </SignedOut>
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ const ProtectedLayout = () => {
   return (
     <>
       <SignedIn>
-        <Layout />
+        <Outlet />
       </SignedIn> 
 
       <SignedOut>
@@ -39,15 +39,11 @@ const ProtectedLayout = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ProtectedLayout />,
+    element: <Layout />,
     children: [
       {
-        path:"/",
-        element:<Home/>
-      },
-      {
-        path: "coin/:coinId",
-        element: <Coin />,
+        index: true,
+        element: <Home />,
       },
       {
         path: "features",
@@ -60,6 +56,15 @@ const router = createBrowserRouter([
       {
         path: "blog",
         element: <Blog />,
+      },
+      {
+        element: <ProtectedLayout />,
+        children: [
+          {
+            path: "coin/:coinId",
+            element: <Coin />,
+          },
+        ],
       },
     ],
   },

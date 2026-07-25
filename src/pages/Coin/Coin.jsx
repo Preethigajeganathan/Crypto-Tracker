@@ -10,7 +10,7 @@ const Coin = () => {
   const {coinId} = useParams();
   const [coinData, setCoinData] = useState();
   const [historicalData, setHistoricalData] = useState();
-  const {Currency} = useContext(CoinContext)
+  const {Currency} = useContext(CoinContext);
 
   const apiKey = import.meta.env.VITE_COINGECKO_API_KEY;
 
